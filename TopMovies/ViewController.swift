@@ -12,10 +12,16 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet var viewModel: ViewModel!
-
+    @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        viewModel.fetchMovies {
+            DispatchQueue.main.async {
+               self.tableView.reloadData()
+            }
+        }
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -54,11 +54,17 @@
                     </view>
                     <navigationItem key="navigationItem" title="Top Movies" id="thc-L2-VI7"/>
                     <connections>
+                        <outlet property="tableView" destination="pMd-7Q-5ne" id="ixY-jy-qUy"/>
                         <outlet property="viewModel" destination="7Yp-IC-3u0" id="cFe-bH-3Yg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <customObject id="7Yp-IC-3u0" customClass="ViewModel" customModule="TopMovies" customModuleProvider="target"/>
+                <customObject id="7Yp-IC-3u0" customClass="ViewModel" customModule="TopMovies" customModuleProvider="target">
+                    <connections>
+                        <outlet property="moviesClient" destination="lr9-xG-CX3" id="udB-Pm-Lwq"/>
+                    </connections>
+                </customObject>
+                <customObject id="lr9-xG-CX3" customClass="MoviesClient" customModule="TopMovies" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="117.85714285714285"/>
         </scene>
